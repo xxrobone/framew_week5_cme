@@ -1,11 +1,9 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.scss';
 import Hero from '@/components/Hero/Hero';
-
-const inter = Inter({ subsets: ['latin'] });
+import Bio from '@/components/bio/Bio';
 
 export default function Home() {
   return (
@@ -42,6 +40,7 @@ export default function Home() {
           transition={{ duration: 0.4, delay: 0.6, ease: 'easeInOut' }}
         ></motion.div>
         <Hero />
+        <Bio />
       </main>
     </>
   );

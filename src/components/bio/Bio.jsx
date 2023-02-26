@@ -1,10 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import IMGBIO from '../../assets/images/tony_bio.png'
-import {Link} from 'react-router-dom'
+import IMGBIO from '/public/images/tony_bio.png'
 
 // styles
-import styles from './´Bio.module.scss'
+import styles from './Bio.module.scss'
 
 const Bio = () => {
   return (
