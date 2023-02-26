@@ -32,7 +32,8 @@ const Carousel = () => {
                           <Image
                                   src={img}
                                   alt={title}
-                                  style={{objectFit: 'contain', objectPosition: 'top center', width: '80svw', height: '100%', margin: '0 10vw'}}
+                                  fill
+                                  style={{objectFit: 'cover', objectPosition: 'top center'}}
                               />   
                           </div>    
                       )}
