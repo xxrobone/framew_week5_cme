@@ -1,6 +1,7 @@
 import IMG1 from '/public/images/tony_history2.png';
 import IMG2 from '/public/images/tony_history5.png';
 import IMG3 from '/public/images/tony_history7.png';
+import IMG4 from '/public/images/tony_history4.png';
 
 const ytVid1 = '7GGETPlhSY0';
 const ytVid2 = 'ukJLxTC86aI';
@@ -55,21 +56,23 @@ export const videoData = [
 
 export const imageData = [
   {
-    name: 'Tony',
-    details: 'Peformance',
+    title: 'Tony',
     id: 1,
     img: IMG1,
   },
   {
-    name: 'In country?',
-    details: 'Tony exploring the city of',
+    title: 'Chillin',
     id: 2,
     img: IMG2,
   },
   {
-    name: 'The Lockers',
-    details: 'Tony as member of The Lockers',
+    title: 'Tony with The Lockers',
     id: 3,
     img: IMG3,
+  },
+  {
+    title: 'Back in the days',
+    id: 4,
+    img: IMG4,
   },
 ];

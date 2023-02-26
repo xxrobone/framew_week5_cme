@@ -4,12 +4,14 @@ import Image from 'next/image';
 import styles from '@/styles/Home.module.scss';
 import Hero from '@/components/Hero/Hero';
 import Bio from '@/components/bio/Bio';
+import Carousel from '@/components/carousel/Carousel';
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>Tony Gogo
+        </title>
         <meta name='description' content='Official webpage of Tony Gogo' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
@@ -40,6 +42,7 @@ export default function Home() {
           transition={{ duration: 0.4, delay: 0.6, ease: 'easeInOut' }}
         ></motion.div>
         <Hero />
+        <Carousel />
         <Bio />
       </main>
     </>

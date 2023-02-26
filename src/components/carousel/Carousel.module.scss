@@ -1,0 +1,54 @@
+.carousel {
+    margin-top: 20svh;
+    position: relative;
+    width: 100vw;
+    height: 15rem;
+    padding: 0.5rem;
+    overflow: hidden;
+
+    @media(min-width: 768px) {
+        margin: 0;
+        width: 75svw;
+        height: 27rem;
+    }
+
+    .buttons {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 0 1rem;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: clamp(1.4rem, 2vw, 2rem);
+    }
+
+    .inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        p {
+            position: relative;
+        }
+
+        div {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            img {
+                margin: 0 auto;
+                &.show {
+                    opacity: 1;
+                }
+                &.hide{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
