@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import { useState } from 'react'
-import { useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react'
+import { useRouter } from 'next/router';
 import ScrollToTop from '@/utils/scrollToTop/ScrollToTop';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
@@ -12,6 +12,20 @@ import Socials from '../socials/Socials';
 
 export default function Layout({ children }) {
     const [active, setActive] = useState(false);
+    
+    const { events } = useRouter();
+    const closeMobileMenu = useCallback(() => {
+      setActive(false);
+    }, []);
+  
+    useEffect(() => {
+      // subscribe to next/router event
+      events.on('routeChangeStart', closeMobileMenu);
+      return () => {
+        // unsubscribe to event on unmount to prevent memory leak
+        events.off('routeChangeStart', closeMobileMenu);
+      };
+    }, [closeMobileMenu, events]);
 
   return (
     <>
@@ -37,7 +51,7 @@ export default function Layout({ children }) {
       <Header>
         <Nav active={active} setActive={setActive}>
           {navData.map(({ title, path, cls, id }, i) => (
-            <NavItem title={title} path={path} cls={cls} key={id} i={i} />
+            <NavItem title={title} path={path} cls={cls} key={id} i={i} closeMobileMenu={closeMobileMenu}/>
           ))}
          {/*  <LogoSvg /> */}
         </Nav>
