@@ -1,0 +1,99 @@
+/* ========== HAMBURGER NAV BUTTON ====================== */
+.hamburger_wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;    
+    border-radius: 50%;
+    -webkit-filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.225));
+            filter: drop-shadow(2px 2px 1px rgba(0,0,0,0.225));
+  }
+  
+  .hamburger {    
+    position: relative;   
+    padding: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+
+.hamburger span {
+    width: 1.5rem;
+    height: .1rem;
+    background-color: #ededed;
+    margin-bottom: .5rem;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    position: absolute;
+}
+
+.hamburger span:nth-child(1) {
+    left: 0.75rem;
+    top: 1rem;
+}
+
+.hamburger span:nth-child(2) {
+    left: 0.75rem;
+    top: 1.5rem;
+}
+
+
+.hamburger span:nth-child(2):after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.5rem;
+    height: 100%;
+    background-color: #ededed;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+
+.hamburger span:nth-child(3) {
+    right: 0.75rem;
+    top: 2rem;
+}
+
+.hamburger.active {
+    transition: transform 0.6s ease;
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+}
+
+.hamburger.active span:nth-child(1),
+.hamburger.active span:nth-child(3) {
+    width: 0;
+    background-color: #888;
+}
+
+.hamburger.active span:nth-child(2) {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    transition-delay: 0.6s;
+
+    background-color: #888;
+}
+
+.hamburger.active span:nth-child(2):after {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    transition-delay: 0.6s;
+
+    background-color: #888;
+}
+      
+ 
+  @media screen and (min-width: 768px) {
+    .hamburger {
+      display: none;
+  }
+}

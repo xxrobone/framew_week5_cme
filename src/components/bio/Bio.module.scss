@@ -1,0 +1,48 @@
+.bio {
+        margin: 0 auto 20vh;
+        width: 70%;
+        min-height: 100vh;
+        position: relative;
+        z-index: 1;
+      
+        @media(min-width: 768px) {
+          margin-top: 0;
+      }
+
+      h2 {
+        margin-top: 2rem;
+        font-size: clamp(2rem, 5vw, 6rem);
+        font-family: SourceProBold;
+        color: white;
+      }
+
+      
+      h4 {
+        margin-top: 1rem;
+        font-size: 1rem;
+        color: white;
+        text-align: center;
+    }
+
+      img {
+        width: 100%;
+        height: auto;    
+    }
+
+    p {
+        margin: 2rem auto 0;
+        padding: 0.25rem 0.5rem;
+        color: rgba(255, 255, 255, 0.987);
+        font-family: SourceProLight;
+        font-size: 1rem;
+        font-weight: 100;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        text-shadow: 1px 1px black;
+        text-align: left;
+
+        :last-of-type {
+            margin-bottom: 10vh;
+        }
+    }
+}
