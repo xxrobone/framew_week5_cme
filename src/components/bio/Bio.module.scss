@@ -1,12 +1,12 @@
 .bio {
-        margin: 20vh auto 20vh;
+        margin: 5vh auto 5vh;
         width: 70%;
         min-height: 100vh;
         position: relative;
         z-index: 1;
       
         @media(min-width: 768px) {
-          margin-top: 0;
+          width: 60%;
       }
 
       h2 {
@@ -19,7 +19,7 @@
       
       h4 {
         margin-top: 1rem;
-        font-size: 1rem;
+        font-size: clamp(1.4rem, 2vw, 3rem);
         color: white;
         text-align: center;
         letter-spacing: 1px;
@@ -27,14 +27,18 @@
 
       img {
         width: 60%;
-        height: auto;    
+        height: auto;   
+        
+        @media(min-width: 768px) {
+          width: 40%;
+      }
     }
 
     p {
         margin: 2rem auto 0;
         padding: 0.25rem 0.5rem;
         color: rgba(255, 255, 255, 0.987);
-        font-size: 1rem;
+        font-size: clamp(1rem, 1.5vw, 1.6rem);
         font-weight: 100;
         letter-spacing: 1px;
         line-height: 1.5;
