@@ -1,5 +1,5 @@
 import SideScroll from '@/components/sidescrollanimation/SideScroll';
-
+import Locker from '@/components/locker/Locker';
 //import styles
 import styles from '../styles/PageNotFound.module.scss';
 
@@ -23,6 +23,7 @@ export default function PageNotFound() {
       >
         Tutorial by Stefan Vitasovic
       </a> */}
+          <Locker />
       <SideScroll />
     </div>
   );
