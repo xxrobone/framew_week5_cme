@@ -116,7 +116,7 @@ const SideScroll = (e) => {
 
   return (
     <>
-      <motion.div className={styles.bg} style={{ opacity }} ref={constraintsRef} />
+      <motion.div style={{ opacity }} ref={constraintsRef} />
       <motion.div
         className={styles.sidescroll}
         ref={sidescroll}

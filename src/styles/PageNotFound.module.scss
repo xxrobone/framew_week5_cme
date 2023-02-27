@@ -1,7 +1,9 @@
 .pagenotfound {
+    width: 100svw;
     background-color: red;
-    display: grid;
-    place-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-image: repeating-linear-gradient(
     to bottom,
     transparent 7px,
@@ -12,30 +14,25 @@
   overscroll-behavior-x: none;
 
     h1 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         padding: 0 1rem;
-        text-align: center;
         color: white;
-        font-size: clamp(2rem, 6vw, 6rem);
-
-        @media screen and (min-width: 768px) {
-            width: 100%;
-          }
-          
+        font-size: clamp(1.8rem, 6vw, 6rem);          
     }
 
     p {
-        margin: 2rem auto;
         max-width: 60vw;
         font-size: 1rem;
     }
 
-    a {
+   /*  a {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translateX(-50%);
         z-index: 100;
-        width: 100%;
+        max-width: 100%;
         font-size: 2rem;
         text-align: center;
 
@@ -44,5 +41,5 @@
             text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
     color: #fff6a9;
         }
-    }
+    } */
 }
