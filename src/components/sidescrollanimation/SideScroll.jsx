@@ -58,18 +58,15 @@ const SideScrollItem = ({ content, speed }) => {
   );
 };
 
-const SideScroll = () => {
+const SideScroll = (e) => {
   const sidescroll = useRef(null);
   const slowDown = useRef(false);
   const isScrolling = useRef(false);
-  const constraintsRef = useRef(null);
+    const constraintsRef = useRef(null);
 
-    const x = useRef(0);
-    let w;
-    if (typeof window !== "undefined") {
-       w = useRef(window.innerWidth).current;
-      }
-  const speed = useSpring(_.speed, {
+    const x = useRef(0);    
+    const w = useRef(e.innerWidth).current;
+    const speed = useSpring(_.speed, {
     damping: 40,
     stiffness: 90,
     mass: 5
