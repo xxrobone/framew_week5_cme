@@ -1,11 +1,10 @@
 @use '../abstracts' as *;
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 
 
-$font-base: 'Open Sans', sans-serif;
-$font-alt: 'Orbitron', sans-serif;
+
+$font-base: 'Poppins', sans-serif;
 $font-default: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
