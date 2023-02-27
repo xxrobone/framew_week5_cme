@@ -6,13 +6,12 @@
     flex-direction: column;
     align-items: center;
 
-    h2 {
-        font-family: SourcePro;
+    h2 {       
         font-size: clamp(2rem, 4vw, 6rem);
         color: #ffa900;
         text-transform: uppercase;
 
-        &:last-of-type {
+        &:last-child {
             margin-bottom: 4rem;
         }
     }
@@ -137,5 +136,43 @@
             }
         }         
 
+    }
+}
+
+.contactPageModal {
+    margin: 0;
+    padding: 4rem;
+    width: 100%;
+    height: 100%;   
+    display: grid;
+    place-content: center;
+    background: linear-gradient(120deg, rgba(175, 70, 70, 0.486), rgba(73, 124, 73, 0.527), rgba(114, 114, 199, 0.397));
+    clip-path: polygon(0% 0%, 100% 0, 100% 80%, 70% 80%, 75% 100%, 50% 80%, 0 80%);
+
+
+    &>h2 {
+        font-weight: 800;
+        color: rgb(0, 0, 0);
+        text-shadow: 
+    1px 0px 1px #ccc, 0px 1px 1px #eee, 
+    2px 1px 1px #ccc, 1px 2px 1px #eee,
+    3px 2px 1px #ccc, 2px 3px 1px #eee,
+    4px 3px 1px #ccc, 3px 4px 1px #eee,
+    5px 4px 1px #ccc, 4px 5px 1px #eee,
+    6px 5px 1px #ccc, 5px 6px 1px #eee,
+    7px 6px 1px #ccc;
+    }
+
+    p {
+        font-size: clamp(1.2rem, 2vw, 2rem);
+        color: #000000;
+        text-shadow: 
+    1px 0px 1px #ccc, 0px 1px 1px #eee, 
+    2px 1px 1px #ccc, 1px 2px 1px #eee,
+    3px 2px 1px #ccc, 2px 3px 1px #eee,
+    4px 3px 1px #ccc, 3px 4px 1px #eee,
+    5px 4px 1px #ccc, 4px 5px 1px #eee,
+    6px 5px 1px #ccc, 5px 6px 1px #eee,
+    7px 6px 1px #ccc;
     }
 }

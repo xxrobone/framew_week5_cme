@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import Image from 'next/image';
-import Script from 'next/script';
-/* import emailjs from '@emailjs/browser'; */
+import { useRouter } from 'next/navigation';
+import emailjs from '@emailjs/browser';
 import {motion} from 'framer-motion'
 import { FcCheckmark } from 'react-icons/fc'
 import Modal from '../../components/modal/Modal';
@@ -12,9 +12,9 @@ import styles from './Contact.module.scss'
 
 const ModalContent = () => {
   return (
-    <div style={{width: '80%', margin: '3rem auto', display: 'grid', placeContent: 'center'}}>
-      <h2 style={{color: 'white'}}>Thanks for your mail!</h2>
-      <p style={{ color: 'white' }}>I&apos;ll get back to you as soon as possible :D</p>
+    <div className={styles.contactPageModal}>
+      <h2>Thanks for your email!</h2>
+      <p>I&apos;ll get back to you as soon as possible :D</p>
       <Image src={IMG} alt="" style={{
         position: 'absolute',
         left: '0',
@@ -23,7 +23,8 @@ const ModalContent = () => {
         zIndex: '-1',
         width: '100%',
         height: '100%',
-        objectFit: 'cover'
+        objectFit: 'contain',
+        objectPosition: 'center'
       }} />
     </div>
   );
@@ -33,12 +34,19 @@ const Contact = () => {
     /* const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' }) */
   const [modalOpen, setModalOpen] = useState(false);
 
-  const close = () => setModalOpen(false);
+  const router = useRouter()
+
+
+  // testar annat sätt, men vet inte
+  const close = () => {
+    setModalOpen(false);
+    router.push('/')
+  }
   const open = () => setModalOpen(true);
   const form = useRef();
   
-/* 
-    const onChangeHandler = (e) => {
+
+    /* const onChangeHandler = (e) => {
         const value = e.target.value;
         setFormData({ ...formData, [e.target.name]: value})
       console.log(e.target.value)
@@ -46,11 +54,16 @@ const Contact = () => {
   
 
     const handleSubmit = (e) => {
-      /*   e.preventDefault()
-      let isValid = e.target.checkValidity()
-      console.log(isValid)
+      e.preventDefault()
+      
+      if (!form.current.checkValidity()) {
+        console.log('valid')
+      } else {
+        console.log('not valid')
+      }
+
            
-        emailjs.sendForm(process.env.REACT_APP_SENDER_ID, process.env.REACT_APP_TEMP_ID, form.current, process.env.REACT_APP_KEY)
+       /*  emailjs.sendForm(process.env.NEXT_PUBLIC_SENDER_ID, process.env.NEXT_PUBLIC_TEMP_ID, form.current, process.env.NEXT_PUBLIC_KEY)
       .then((result) => {
         console.log(result.text);
         form.current.reset();
@@ -65,10 +78,20 @@ const Contact = () => {
         message: ${formData.message}`) 
         
     */
+  
+  const handleModal = () => {
+    if (!form.current.checkValidity()) {
+      setModalOpen(false)
+      console.log('not valid')
+    } else {
+      console.log('valid')
+      modalOpen ? close() : open() 
+      
+    }
+  }
 
   return (
     <div className={styles.contact}>
-      <Script src="https://smtpjs.com/v3/smtp.js" />
       <motion.h2
         initial={{x: -300, opacity: 0}}
         animate={{x: 0, opacity: 1}}
@@ -127,7 +150,7 @@ const Contact = () => {
           <span className={styles.check_icon}><FcCheckmark /></span>
         </div>
         <input className={styles.submit_btn} type="submit" name="submit" value="Submit"
-        onClick={() => (modalOpen ? close() : open())}
+        onClick={(e) => handleModal(e)}
         />
       </motion.form>
       {modalOpen && (
