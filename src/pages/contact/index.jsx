@@ -57,19 +57,18 @@ const Contact = () => {
       e.preventDefault()
       
       if (!form.current.checkValidity()) {
-        console.log('valid')
-      } else {
         console.log('not valid')
-      }
-
-           
-       /*  emailjs.sendForm(process.env.NEXT_PUBLIC_SENDER_ID, process.env.NEXT_PUBLIC_TEMP_ID, form.current, process.env.NEXT_PUBLIC_KEY)
+      } else {
+        console.log('valid')
+        emailjs.sendForm(process.env.NEXT_PUBLIC_SENDER_ID, process.env.NEXT_PUBLIC_TEMP_ID, form.current, process.env.NEXT_PUBLIC_KEY)
       .then((result) => {
         console.log(result.text);
         form.current.reset();
       }, (error) => {
           console.log(error.text);
-      }); */
+      });
+      }           
+        
   }
   
    /* console.log(`name: ${formData.name} \n
