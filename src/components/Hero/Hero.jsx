@@ -67,7 +67,7 @@ const Hero = () => {
            }}
            transition={{duration: 0.4, delay: 2.4, ease: 'easeInOut'}}
           >
-            <Link href="#videos">
+            <Link href="#bio" scroll={false}>
             <FiArrowDownCircle className={styles.icon} />
             </Link>
           </motion.div>

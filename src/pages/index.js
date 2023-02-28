@@ -10,8 +10,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Tony Gogo
-        </title>
+        <title>Tony Gogo</title>
         <meta name='description' content='Official webpage of Tony Gogo' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
@@ -43,7 +42,9 @@ export default function Home() {
         ></motion.div>
         <Hero />
         <Carousel />
-        <Bio />
+        <div id='bio'>
+          <Bio />
+        </div>
       </main>
     </>
   );
