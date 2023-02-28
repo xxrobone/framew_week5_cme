@@ -25,6 +25,10 @@
         align-items: center;
         justify-content: space-between;
         font-size: clamp(1.4rem, 2vw, 2rem);
+
+        svg {
+            cursor: pointer;
+        }
     }
 
     .inner {

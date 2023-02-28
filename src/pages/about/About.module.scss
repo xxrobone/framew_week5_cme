@@ -1,0 +1,53 @@
+.about {
+        margin: 0 auto 20vh;
+        width: 70%;
+        min-height: 100vh;
+        position: relative;
+        z-index: 1;
+      
+        @media(min-width: 768px) {
+          margin-top: 0;
+      }
+
+      h2 {
+        margin-top: 2rem;
+        font-size: clamp(3rem, 5vw, 8rem);
+        font-family: SourceProBold;
+        color: white;
+      }
+
+      .img_wrapper {   
+        margin: 4rem auto;      
+        width: 80%;
+        height: auto;   
+        position: relative;       
+    }
+
+      .img {
+        position: relative;       
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        
+       
+    }
+
+    
+
+    p {
+        margin: 2rem auto 0;
+        padding: 0.25rem 0.5rem;
+        color: rgba(255, 255, 255, 0.987);
+        font-family: SourceProLight;
+        font-size: 1rem;
+        font-weight: 100;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        text-shadow: 1px 1px black;
+        text-align: left;
+
+        :last-child {
+            margin-bottom: 2rem;
+        }
+    }
+}
