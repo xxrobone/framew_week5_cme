@@ -51,7 +51,7 @@ const About = () => {
 
       </div>
  <p>
-Since leaving the Original Lockers group in the early 1980s, Tony has taught and developed not only the original art of Locking in Japan but he recognised, created and developed a style that has by now become unique to the Asian style of Locking, sometimes refered to as &apos;Lock Fusion. Tony Go Go is now considered the innovator of the Japanese style of Locking.
+Since leaving the Original Lockers group in the early 1980s, Tony has taught and developed not only the original art of Locking in Japan but he recognised, created and developed a style that has by now become unique to the Asian style of Locking, sometimes refered to as &apos;Lock Fusion&apos;. Tony Go Go is now considered the innovator of the Japanese style of Locking.
 <br/>
 Being the only pioneer of Locking to reside in Japan, Tony has trained most Japanese Lockers who have gained international acclaim, but none more prominent than his two sons Yuu and Rei, better known as the Go Go Brothers of today. They have a strong synchronised locking background by which, one can tell, they learned from only the very best - Tony recalls, &apos;When Me, Skeet and Buddy got together in the early 70&apos;s we worked on steps over and over again, and that&apos;s the way I taught them&apos;. It doesn&apos;t come as a surprise then that Yuu and Rei started dancing around the same time they started walking. They trained in Locking and Tap Dance from a very early age, performing with their father on numerous occasions throughout Japan.
 <br/>
