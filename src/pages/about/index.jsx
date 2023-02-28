@@ -19,8 +19,8 @@ const About = () => {
           className={styles.img}
           src={IMGJUDGE}
           alt="tony judge solo"
-          width={'60%'}
-          height={'auto'}
+          width='60%'
+          height='auto'
         />
       </motion.div>
       <motion.h2
@@ -45,8 +45,8 @@ const About = () => {
       <div className={styles.img_wrapper}>
       <Image src={IMGFANCY} alt="tony in costume"
           className={styles.img}
-          width={'60%'}
-          height={'auto'}
+          width='60%'
+          height='auto'
             />
 
       </div>
