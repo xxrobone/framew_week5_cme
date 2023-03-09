@@ -5,6 +5,8 @@ import styles from '@/styles/Home.module.scss';
 import Hero from '@/components/Hero/Hero';
 import Bio from '@/components/bio/Bio';
 import Carousel from '@/components/carousel/Carousel';
+import Video from '@/components/videoscomponent/Video';
+import { videoData } from '@/assets/data/pageData';
 
 export default function Home() {
   return (
@@ -42,6 +44,20 @@ export default function Home() {
         ></motion.div>
         <Hero />
         <Carousel />
+        <Video>
+          {videoData.map(({ vid, vtime, id }) => (
+            <div key={id}>
+              <iframe
+              title='tony gogo'
+              className={styles.video}
+              type='text/html'
+              src={`https://www.youtube-nocookie.com/embed/${vid}?start=${vtime}`}
+              allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture full'
+          ></iframe>
+
+            </div>
+            ))}
+        </Video>
         <div id='bio'>
           <Bio />
         </div>

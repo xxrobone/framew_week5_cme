@@ -20,8 +20,8 @@ export const navData = [
     id: 2,
   },
   {
-    title: 'events',
-    path: '/events',
+    title: 'media',
+    path: '/media',
     id: 3,
   },
   {

@@ -28,12 +28,11 @@ const Carousel = () => {
                   <div key={id} className={id === current ? 'show' : 'hide'}> 
                       {i === current && (
                           <div>
-                              <p>{title}</p>
                           <Image
                                   src={img}
                                   alt={title}
                                   fill
-                                  style={{objectFit: 'cover', objectPosition: 'top center'}}
+                                    priority
                               />   
                           </div>    
                       )}
