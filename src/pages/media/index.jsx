@@ -1,8 +1,12 @@
+/* import ImageGallery from '@/components/imagegallery/ImageGallery' */
 import React from 'react'
 
 const index = () => {
   return (
-    <div>Media</div>
+      <div>
+          <h1>Media</h1>
+          {/* <ImageGallery /> */}
+    </div>
   )
 }
 

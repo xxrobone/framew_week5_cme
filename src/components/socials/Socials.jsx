@@ -13,32 +13,32 @@ const Socials = () => {
       animate={{ x: 0, opacity: 1 }}
       transition={{duration: 1, delay: 2.3}}
     >
-      <a
+      <Link
             href='https://www.linkedin.com/in/tony-gogo-5a8430a/'
             target='_blank'
             rel='noreferrer noopener'
           >
-            <FiLinkedin className={`${styles.soc-icon} ${styles.soc-item}`} />
-          </a>
+            <FiLinkedin className={`${styles.soc_icon} ${styles.soc_item}`} />
+          </Link>
 
-          <a
+          <Link
             href='https://www.facebook.com/profile.php?id=100013249814960'
             target='_blank'
             rel='noreferrer noopener'
           >
-            <FiFacebook className={`${styles.soc-icon} ${styles.soc-item}`} />
-          </a>
-          <a
+            <FiFacebook className={`${styles.soc_icon} ${styles.soc_item}`} />
+          </Link>
+          <Link
             href='https://www.instagram.com/tonygogo_anthony/'
             target='_blank'
             rel='noreferrer noopener'
           >
-            <FiInstagram className={`${styles.soc-icon} ${styles.soc-item}`} />
-          </a>
+            <FiInstagram className={`${styles.soc_icon} ${styles.soc_item}`} />
+          </Link>
           <Link
-            to='/contact'
+            href='/contact'
           >
-            <FiMail className={`${styles.soc-icon} ${styles.soc-item}`} />
+            <FiMail className={`${styles.soc_icon} ${styles.soc_item}`} />
           </Link>
 
           

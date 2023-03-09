@@ -24,7 +24,7 @@ const variants = {
       delay: 0.5,
       duration: 1,
     },
-  },  
+  },
   onHover: {
     originX: 0,
     scale: [1, 1.4, 1.2],
@@ -32,7 +32,6 @@ const variants = {
     transition: { type: 'spring', stiffness: 120 },
   },
   fly: {
-    
     opacity: 1,
     scale: [1, 1, 1, 1, 1, 1, 1.4, 1.2, 1, 1, 1, 1],
     rotate: [0, 0, 0, 0, 0, 0, 360, 180, 0, 0, 0],
@@ -52,7 +51,6 @@ export default function Layout({ children }) {
   const closeMobileMenu = useCallback(() => {
     setActive(false);
   }, []);
-
 
   useEffect(() => {
     // subscribe to next/router event
@@ -113,7 +111,7 @@ export default function Layout({ children }) {
             animate={clicked ? 'fly' : 'visible'}
             whileHover={variants.onHover}
             onDoubleClick={() => {
-              setClicked((clicked) => !clicked)
+              setClicked((clicked) => !clicked);
             }}
           >
             <FiHome />
@@ -137,7 +135,17 @@ export default function Layout({ children }) {
       <ScrollToTop>
         <main>{children}</main>
       </ScrollToTop>
-      <Footer />
+      <Socials />
+      <Footer>
+        &copy; Tony GoGo 2023 ||
+        <Link
+          href='https://robertwagar.se'
+          target='_blank'
+          rel='noreferrer noopener'
+        >
+          Developed by Rob-One
+        </Link>
+      </Footer>
     </>
   );
 }

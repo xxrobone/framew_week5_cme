@@ -3,14 +3,11 @@
     height: 6vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
-    .border_bottom {
-        position: absolute;
-        top: 6vh;
-        width: 0%;
-        z-index: 1;
-        border-color: rgba(255,255,255, .2);
-        border-width: .5px;
-      }
+    a {
+      text-decoration: none;
+      margin-left: 2rem;
+      color: #888;
+    }
 }
