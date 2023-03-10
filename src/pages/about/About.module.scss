@@ -18,21 +18,20 @@
 
       .img_wrapper {   
         margin: 4rem auto;      
-        width: 80%;
+        width: 60%;
         height: auto;   
-        position: relative;       
-    }
+        position: relative; 
+        object-fit: cover;  
+        object-position: center; 
+        display: grid;
+        place-content: center;   
 
-      .img {
-        position: relative;       
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        
-       
-    }
-
-    
+        @media(min-width: 768px) {
+          margin: 4rem auto;      
+          width: 80%;
+          height: auto;  
+      }
+    }   
 
     p {
         margin: 2rem auto 0;
