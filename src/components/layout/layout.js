@@ -2,16 +2,16 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/router';
-import { motion } from 'framer-motion';
+/* import { motion } from 'framer-motion'; */
 import ScrollToTop from '@/utils/scrollToTop/ScrollToTop';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
-import LogoSvg from '../logosvg/LogoSvg';
+/* import LogoSvg from '../logosvg/LogoSvg'; */
 import Nav from '../nav/Nav';
 import NavItem from '../nav/NavItem';
 import { navData } from '@/assets/data/pageData';
 import Socials from '../socials/Socials';
-import { FiHome } from 'react-icons/fi';
+/* import { FiHome } from 'react-icons/fi'; */
 
 // for home button animation
 const variants = {
@@ -45,7 +45,7 @@ const variants = {
 
 export default function Layout({ children }) {
   const [active, setActive] = useState(false);
-  const [clicked, setClicked] = useState(false);
+  /* const [clicked, setClicked] = useState(false); */
 
   const { events } = useRouter();
   const closeMobileMenu = useCallback(() => {
@@ -104,7 +104,7 @@ export default function Layout({ children }) {
       </Head>
 
       <Header>
-        <Link href='/'>
+       {/*  <Link href='/'>
           <motion.div
             variants={variants}
             initial='notVisible'
@@ -116,7 +116,7 @@ export default function Layout({ children }) {
           >
             <FiHome />
           </motion.div>
-        </Link>
+        </Link> */}
 
         <Nav active={active} setActive={setActive}>
           {navData.map(({ title, path, cls, id }, i) => (

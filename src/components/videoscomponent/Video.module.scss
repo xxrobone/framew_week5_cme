@@ -1,4 +1,5 @@
 .video_wrapper {
+    margin-bottom: 10rem;
     width: 100vw;
     height: 80vh;
     display: block;
@@ -10,5 +11,9 @@
         display: flex;
         flex-direction: column;
         overflow-y: scroll;
+
+        ::-webkit-scrollbar {
+            display: none;
+          }
     }
 }
